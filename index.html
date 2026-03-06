@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enzo Henrique Favaro — Backend Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/icon.ico" />
+</head>
+<body>
+
+  <!-- ── CURSOR ──────────────────────────────────────────────── -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── BACKGROUND EFFECTS ──────────────────────────────────── -->
+  <div class="grid-bg"></div>
+  <div class="glow-blob" id="glow"></div>
+
+  <!-- ── PAGE WRAPPER ────────────────────────────────────────── -->
+  <div class="page">
+
+    <!-- NAV ──────────────────────────────────────────────────── -->
+    <nav class="fade-in">
+      <span class="nav-logo">// ehf.dev</span>
+      <div class="nav-links">
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Projetos</a>
+        <a href="src/cvEnzo.pdf" target="_blank">Currículo</a>
+      </div>
+    </nav>
+
+    <!-- HERO ─────────────────────────────────────────────────── -->
+    <section class="hero">
+
+      <!-- Left: text content -->
+      <div class="hero-content">
+        <div class="hero-tag fade-in delay-1">Backend Developer</div>
+
+        <h1 class="hero-name fade-in delay-2">
+          Enzo<br><span>Henrique</span><br>Favaro
+        </h1>
+
+        <p class="hero-role fade-in delay-3">
+          <span class="comment">// </span>Java · Spring Boot · SQL
+        </p>
+
+        <p class="hero-bio fade-in delay-4">
+          Apaixonado por tecnologia e em constante aprendizado, tenho um grande
+          apreço pelo conhecimento contínuo e pela superação de desafios —
+          sempre buscando evoluir não apenas como profissional, mas também como
+          ser humano.
+        </p>
+      </div>
+
+      <!-- Right: photo + socials -->
+      <div class="hero-photo-wrap fade-in delay-3">
+
+        <!-- Clean photo frame, no matrix bg -->
+        <div class="photo-frame track-3d" id="mainPhoto">
+          <img src="img/eu01.png" alt="Enzo Henrique Favaro" />
+        </div>
+        <div class="photo-accent"></div>
+
+        <!-- Social buttons below the photo -->
+        <div class="social-stack">
+          <a href="https://www.linkedin.com/in/enzohenriquefavaro/" target="_blank" class="social-btn">
+            <img src="src/imgs/linkedin.svg" alt="LinkedIn" class="social-icon" />
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/Enzima01" target="_blank" class="social-btn">
+            <img src="src/imgs/github.svg" alt="GitHub" class="social-icon" />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SKILLS + PROJECTS GRID ───────────────────────────────── -->
+    <div class="main-grid" id="skills">
+
+      <!-- LEFT: Skills sidebar -->
+      <div class="card skills-card fade-in delay-3">
+
+        <!-- Card title with brain SVG -->
+        <h3 class="card-title">
+          <img src="img/brain3.svg" alt="" class="card-title-icon" />
+          Habilidades
+        </h3>
+
+        <!-- Desenvolvimento -->
+        <div class="skill-group">
+          <div class="skill-group-label">
+            <img src="src/imgs/dev.svg" alt="" class="group-icon" />
+            Desenvolvimento
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="img/java-svgrepo-com.svg" alt="Java" class="skill-icon" />
+              <span class="skill-name">Java</span>
+            </div>
+            <div class="skill-item">
+              <img src="img/Spring_Boot.svg" alt="Spring Boot" class="skill-icon" />
+              <span class="skill-name">Spring Boot</span>
+            </div>
+            <div class="skill-item">
+              <img src="src/imgs/sql.svg" alt="SQL" class="skill-icon" />
+              <span class="skill-name">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ferramentas -->
+        <div class="skill-group">
+          <div class="skill-group-label">
+            <img src="img/tool1.svg" alt="" class="group-icon" />
+            Ferramentas
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="img/git-svgrepo-com.svg" alt="Git" class="skill-icon skill-icon-color" />
+              <span class="skill-name">Git</span>
+            </div>
+            <div class="skill-item">
+              <img src="src/imgs/github.svg" alt="GitHub" class="skill-icon skill-icon-color" />
+              <span class="skill-name">GitHub</span>
+            </div>
+            <div class="skill-item">
+              <img src="img/postman-icon-svgrepo-com.svg" alt="Postman" class="skill-icon skill-icon-color" />
+              <span class="skill-name">Postman</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outros -->
+        <div class="skill-group">
+          <div class="skill-group-label">
+            <img src="img/other-svgrepo-com.svg" alt="" class="group-icon" />
+            Outros
+          </div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <img src="src/imgs/powerbi.svg" alt="Power BI" class="skill-icon skill-icon-color" />
+              <span class="skill-name">Power BI</span>
+            </div>
+            <div class="skill-item">
+              <img src="src/imgs/excel.png" alt="Excel" class="skill-icon skill-icon-color" />
+              <span class="skill-name">Excel</span>
+            </div>
+            <div class="skill-item">
+              <img src="src/imgs/photoshop.svg" alt="Photoshop" class="skill-icon skill-icon-color" />
+              <span class="skill-name">Photoshop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Idiomas -->
+        <div class="skill-group">
+          <div class="skill-group-label">Idiomas</div>
+          <div class="skills-list">
+            <div class="skill-item">
+              <div class="skill-dot"></div>
+              <span class="skill-name">Português</span>
+              <span class="skill-tag">Nativo</span>
+            </div>
+            <div class="skill-item skill-item-accordion" id="ingles-item">
+              <div class="skill-dot"></div>
+              <span class="skill-name">Inglês</span>
+              <button class="accordion-toggle" id="ingles-toggle" aria-expanded="false" aria-controls="ingles-certs">
+                <svg class="chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+            </div>
+            <!-- Accordion content -->
+            <div class="accordion-panel" id="ingles-certs" aria-hidden="true">
+              <a href="src/certificates/fce.pdf" target="_blank" class="cert-link">
+                <img src="img/certification-file-svgrepo-com.svg" alt="" class="cert-icon" />
+                FCE — Cambridge
+              </a>
+              <a href="src/certificates/toeic.pdf" target="_blank" class="cert-link">
+                <img src="img/certification-file-svgrepo-com.svg" alt="" class="cert-icon" />
+                TOEIC — ETS
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- CV download with icon -->
+        <a href="src/cvEnzo.pdf" target="_blank" class="btn btn-primary" style="justify-content: center; margin-top: 4px;">
+          <img src="img/cv-file-interface-symbol-svgrepo-com.svg" alt="" class="btn-icon btn-icon-dark" />
+          Currículo PDF
+        </a>
+      </div>
+
+      <!-- RIGHT: Projects -->
+      <div class="projects-col" id="projects">
+
+        <!-- Projects section title with graphic SVG -->
+        <div class="projects-header">
+          <img src="img/graphic.svg" alt="" class="projects-header-icon" />
+          <h2 class="projects-title">Projetos</h2>
+        </div>
+
+        
+          <!-- API PROJECT -->
+        <div class="project-card track-3d fade-in delay-4">
+          <div class="project-card-inner">
+          <div class="project-img">
+            <img src="img/apiSITE.png" alt="API Project" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-info">
+              <div class="project-name">REST API</div>
+              <div class="project-stack">
+                <span class="stack-tag">Java</span>
+                <span class="stack-tag">Spring Boot</span>
+                <span class="stack-tag">JPA</span>
+                <span class="stack-tag">Hibernate</span>
+                <span class="stack-tag">H2 Database</span>
+              </div>
+            </div>
+            <a href="https://github.com/Enzima01/springboot-rest-api" target="_blank" class="project-link">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Ver código
+            </a>
+          </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Project 1: CRUD -->
+        <div class="project-card track-3d fade-in delay-4">
+          <div class="project-card-inner">
+          <div class="project-img">
+            <img src="img/crudSITE.png" alt="CRUD Project" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-info">
+              <div class="project-name">CRUD</div>
+              <div class="project-stack">
+                <span class="stack-tag">Java</span>
+                <span class="stack-tag">MySQL</span>
+                <span class="stack-tag">JDBC</span>
+              </div>
+            </div>
+            <a href="https://github.com/Enzima01/crud-jdbc" target="_blank" class="project-link">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Ver código
+            </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Project 2: System Management Tool -->
+        <div class="project-card track-3d fade-in delay-5">
+          <div class="project-card-inner">
+          <div class="project-img">
+            <img src="img/smtSITE.png" alt="System Management Tool" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-info">
+              <div class="project-name">System Management Tool</div>
+              <div class="project-stack">
+                <span class="stack-tag">Java Swing</span>
+                <span class="stack-tag">OSHI Library</span>
+                <span class="stack-tag">Windows / Linux</span>
+              </div>
+            </div>
+            <a href="https://github.com/Enzima01/SystemManagementTool" target="_blank" class="project-link">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Ver código
+            </a>
+          </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Agenda de Contatos -->
+        <div class="project-card track-3d fade-in delay-6">
+          <div class="project-card-inner">
+          <div class="project-img">
+            <img src="img/cbSITE.png" alt="Agenda de Contatos" />
+            <div class="project-img-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-info">
+              <div class="project-name">Agenda de Contatos</div>
+              <div class="project-stack">
+                <span class="stack-tag">Java Swing</span>
+                <span class="stack-tag">MySQL</span>
+                <span class="stack-tag">JDBC</span>
+              </div>
+            </div>
+            <a href="https://github.com/Enzima01/EnzimasContactBook" target="_blank" class="project-link">
+              <svg class="link-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Ver código
+            </a>
+          </div>
+          </div>
+        </div>
+
+        <div class="terminal-hint">
+          <span class="prompt">$</span>
+          <span>cd ~/projects &amp;&amp; git log --oneline<span class="blink"></span></span>
+        </div>
+
+      </div><!-- /projects-col -->
+
+    </div><!-- /main-grid -->
+
+    <!-- FOOTER ───────────────────────────────────────────────── -->
+    <footer>
+      <span class="footer-text">© 2026 Enzo Henrique Favaro</span>
+      <span class="footer-text">01000101 01101110 01111010 01101001 01101101 01100001 00110000 00110001 </span>
+    </footer>
+
+  </div><!-- /page -->
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
