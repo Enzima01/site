@@ -5,31 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Enzo Henrique Favaro — Backend Developer</title>
 
-  <!-- Google Fonts -->
+  <!--fonte-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
+  <!--style-->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Favicon -->
+  <!--icon-->
   <link rel="icon" type="image/png" href="img/icon.ico" />
 </head>
 <body>
 
-  <!-- ── CURSOR ──────────────────────────────────────────────── -->
+  <!--cursor-->
   <div id="cursor-dot"></div>
   <div id="cursor-ring"></div>
 
-  <!-- ── BACKGROUND EFFECTS ──────────────────────────────────── -->
+  <!--background-->
   <div class="grid-bg"></div>
   <div class="glow-blob" id="glow"></div>
 
-  <!-- ── PAGE WRAPPER ────────────────────────────────────────── -->
   <div class="page">
 
-    <!-- NAV ──────────────────────────────────────────────────── -->
     <nav class="fade-in">
       <span class="nav-logo">// ehf.dev</span>
       <div class="nav-links">
@@ -39,10 +37,9 @@
       </div>
     </nav>
 
-    <!-- HERO ─────────────────────────────────────────────────── -->
     <section class="hero">
 
-      <!-- Left: text content -->
+      <!--esquerda-->
       <div class="hero-content">
         <div class="hero-tag fade-in delay-1">Backend Developer</div>
 
@@ -62,16 +59,16 @@
         </p>
       </div>
 
-      <!-- Right: photo + socials -->
+      <!--direita-->
       <div class="hero-photo-wrap fade-in delay-3">
 
-        <!-- Clean photo frame, no matrix bg -->
+        <!--foto-->
         <div class="photo-frame track-3d" id="mainPhoto">
           <img src="img/eu01.png" alt="Enzo Henrique Favaro" />
         </div>
         <div class="photo-accent"></div>
 
-        <!-- Social buttons below the photo -->
+        <!--links-->
         <div class="social-stack">
           <a href="https://www.linkedin.com/in/enzohenriquefavaro/" target="_blank" class="social-btn">
             <img src="src/imgs/linkedin.svg" alt="LinkedIn" class="social-icon" />
@@ -85,20 +82,18 @@
       </div>
 
     </section>
-
-    <!-- SKILLS + PROJECTS GRID ───────────────────────────────── -->
     <div class="main-grid" id="skills">
 
-      <!-- LEFT: Skills sidebar -->
+      <!--skills esquerda-->
       <div class="card skills-card fade-in delay-3">
 
-        <!-- Card title with brain SVG -->
+        <!--titulo e svg-->
         <h3 class="card-title">
           <img src="img/brain3.svg" alt="" class="card-title-icon" />
           Habilidades
         </h3>
 
-        <!-- Desenvolvimento -->
+        <!--desenvolvimento-->
         <div class="skill-group">
           <div class="skill-group-label">
             <img src="src/imgs/dev.svg" alt="" class="group-icon" />
@@ -120,7 +115,7 @@
           </div>
         </div>
 
-        <!-- Ferramentas -->
+        <!--ferramentas-->
         <div class="skill-group">
           <div class="skill-group-label">
             <img src="img/tool1.svg" alt="" class="group-icon" />
@@ -142,7 +137,7 @@
           </div>
         </div>
 
-        <!-- Outros -->
+        <!--outros-->
         <div class="skill-group">
           <div class="skill-group-label">
             <img src="img/other-svgrepo-com.svg" alt="" class="group-icon" />
@@ -166,7 +161,7 @@
 
         <div class="divider"></div>
 
-        <!-- Idiomas -->
+        <!--idiomas-->
         <div class="skill-group">
           <div class="skill-group-label">Idiomas</div>
           <div class="skills-list">
@@ -184,7 +179,7 @@
                 </svg>
               </button>
             </div>
-            <!-- Accordion content -->
+            <!--conteudos seta-->
             <div class="accordion-panel" id="ingles-certs" aria-hidden="true">
               <a href="src/certificates/fce.pdf" target="_blank" class="cert-link">
                 <img src="img/certification-file-svgrepo-com.svg" alt="" class="cert-icon" />
@@ -200,24 +195,24 @@
 
         <div class="divider"></div>
 
-        <!-- CV download with icon -->
+        <!--CV-->
         <a href="src/cvEnzo.pdf" target="_blank" class="btn btn-primary" style="justify-content: center; margin-top: 4px;">
           <img src="img/cv-file-interface-symbol-svgrepo-com.svg" alt="" class="btn-icon btn-icon-dark" />
           Currículo PDF
         </a>
       </div>
 
-      <!-- RIGHT: Projects -->
+      <!--projetos-->
       <div class="projects-col" id="projects">
 
-        <!-- Projects section title with graphic SVG -->
+        <!--titulo com svg-->
         <div class="projects-header">
           <img src="img/graphic.svg" alt="" class="projects-header-icon" />
           <h2 class="projects-title">Projetos</h2>
         </div>
 
         
-          <!-- API PROJECT -->
+          <!--REST API-->
         <div class="project-card track-3d fade-in delay-4">
           <div class="project-card-inner">
           <div class="project-img">
@@ -246,7 +241,7 @@
 
 
 
-        <!-- Project 1: CRUD -->
+        <!--CRUD-->
         <div class="project-card track-3d fade-in delay-4">
           <div class="project-card-inner">
           <div class="project-img">
@@ -270,7 +265,7 @@
           </div>
         </div>
 
-        <!-- Project 2: System Management Tool -->
+        <!--System Management Tool-->
         <div class="project-card track-3d fade-in delay-5">
           <div class="project-card-inner">
           <div class="project-img">
@@ -294,7 +289,7 @@
           </div>
         </div>
 
-        <!-- Project 3: Agenda de Contatos -->
+        <!--Agenda de Contatos-->
         <div class="project-card track-3d fade-in delay-6">
           <div class="project-card-inner">
           <div class="project-img">
@@ -323,19 +318,19 @@
           <span>cd ~/projects &amp;&amp; git log --oneline<span class="blink"></span></span>
         </div>
 
-      </div><!-- /projects-col -->
+      </div>
 
-    </div><!-- /main-grid -->
+    </div>
 
-    <!-- FOOTER ───────────────────────────────────────────────── -->
+    <!--footer-->
     <footer>
       <span class="footer-text">© 2026 Enzo Henrique Favaro</span>
       <span class="footer-text">01000101 01101110 01111010 01101001 01101101 01100001 00110000 00110001 </span>
     </footer>
 
-  </div><!-- /page -->
+  </div>
 
-  <!-- JavaScript -->
+  <!--javaScript-->
   <script src="script.js"></script>
 </body>
 </html>

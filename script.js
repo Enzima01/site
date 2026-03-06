@@ -4,17 +4,17 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── CUSTOM CURSOR ──────────────────────────────────────── */
+  /*cursor*/
   const dot  = document.getElementById('cursor-dot');
   const ring = document.getElementById('cursor-ring');
   let rx = 0, ry = 0;
 
-  // Dot follows mouse instantly
+  // mouse
   document.addEventListener('mousemove', e => {
     dot.style.left = e.clientX + 'px';
     dot.style.top  = e.clientY + 'px';
 
-    // Ring lerps behind for a smooth lag effect
+    // efeito lag
     rx += (e.clientX - rx) * 0.12;
     ry += (e.clientY - ry) * 0.12;
   });
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   animateRing();
 
-  // Ring grows when hovering interactive elements
+  // hover
   const interactiveEls = document.querySelectorAll('a, .btn, .project-link, .social-btn, .accordion-toggle, .cert-link');
   interactiveEls.forEach(el => {
     el.addEventListener('mouseenter', () => {
@@ -44,16 +44,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── GLOW BLOB FOLLOWS MOUSE ────────────────────────────── */
+  /*bolha brilhanteeee*/
   const glow = document.getElementById('glow');
   document.addEventListener('mousemove', e => {
     glow.style.transform = `translate(${e.clientX - 300}px, ${e.clientY - 300}px)`;
   });
 
 
-  /* ── 3D TILT — photo & project cards ────────────────────── */
+  /*foto e projetos*/
   document.querySelectorAll('.track-3d').forEach(el => {
-    // Photo tilts more dramatically than project cards
+
     const factor = el.id === 'mainPhoto' ? 12 : 8;
 
     el.addEventListener('mousemove', e => {
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       el.style.transform = `perspective(800px) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-      // Update CSS custom properties for the glow-under-cursor effect
+      //efeito customizado css
       el.style.setProperty('--mx', `${x}px`);
       el.style.setProperty('--my', `${y}px`);
     });
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── SCROLL REVEAL (Intersection Observer) ───────────────── */
+  /*scroll*/
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ── LANGUAGE ACCORDION (Inglês → certificates) ─────────────── */
+  /*certicados ingles*/
   const inglesToggle = document.getElementById('ingles-toggle');
   const inglesPanel  = document.getElementById('ingles-certs');
 
