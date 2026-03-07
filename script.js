@@ -1,6 +1,3 @@
-/* =============================================================
-   script.js — Enzo Henrique Favaro · Portfolio
-   ============================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
