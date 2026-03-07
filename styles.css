@@ -373,6 +373,7 @@ nav {
   display: grid;
   grid-template-columns: 290px 1fr;
   gap: 24px;
+  align-items: start;
 }
 
 /*card*/
