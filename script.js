@@ -160,6 +160,17 @@ document.addEventListener('DOMContentLoaded', () => {
   /*scroll com offset*/
   const navEl = document.querySelector('nav');
 
+  let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const cur = window.scrollY;
+  if (cur > lastScroll && cur > 80) {
+    navEl.classList.add('nav--hidden');
+  } else {
+    navEl.classList.remove('nav--hidden');
+  }
+  lastScroll = cur;
+}, { passive: true });
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       e.preventDefault();
