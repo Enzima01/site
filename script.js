@@ -44,20 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /*foto 3d*/
-  const mainPhoto = document.getElementById('mainPhoto');
-  if (mainPhoto) {
-    mainPhoto.addEventListener('mousemove', e => {
-      const r   = mainPhoto.getBoundingClientRect();
-      const ry2 = ((e.clientX - r.left  - r.width  / 2) / (r.width  / 2)) *  12;
-      const rx2 = ((e.clientY - r.top   - r.height / 2) / (r.height / 2)) * -12;
-      mainPhoto.style.transform = `perspective(800px) scale(1.02) rotateX(${rx2}deg) rotateY(${ry2}deg)`;
-    });
-    mainPhoto.addEventListener('mouseleave', () => {
-      mainPhoto.style.transform = 'perspective(800px) scale(1) rotateX(0deg) rotateY(0deg)';
-    });
-  }
-
   /*cards projetos*/
   document.querySelectorAll('.proj-card').forEach(card => {
     card.addEventListener('mousemove', e => {
