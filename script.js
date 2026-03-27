@@ -143,6 +143,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  const overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML = `
+    <div class="lightbox-inner">
+      <div class="lightbox-img-wrap">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+      <span class="lightbox-caption" id="lightbox-caption"></span>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+ 
+  const lbImg     = document.getElementById('lightbox-img');
+  const lbCaption = document.getElementById('lightbox-caption');
+  const lbClose   = document.getElementById('lightbox-close');
+ 
+  function openLightbox(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lbCaption.textContent = alt;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+ 
+  function closeLightbox() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+ 
+  document.querySelectorAll('.proj-card-img').forEach(wrap => {
+    const img = wrap.querySelector('img');
+    if (!img) return;
+    wrap.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+ 
+  lbClose.addEventListener('click', closeLightbox);
+ 
+  overlay.addEventListener('click', e => {
+    if (e.target === overlay) closeLightbox();
+  });
+ 
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+ 
+  /* Cursor ring no lightbox */
+  [lbClose].forEach(el => {
+    if (!ring) return;
+    el.addEventListener('mouseenter', () => { ring.style.width = '48px'; ring.style.height = '48px'; ring.style.opacity = '.8'; });
+    el.addEventListener('mouseleave', () => { ring.style.width = '32px'; ring.style.height = '32px'; ring.style.opacity = '.5'; });
+  });
+
   /*scroll com offset*/
   const navEl = document.querySelector('nav');
 
